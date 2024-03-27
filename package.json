@@ -1,6 +1,6 @@
 {
   "name": "local-session-index",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "a trivial index for Automerge session URLs",
   "type": "module",
   "source": "src/localSessionIndex.ts",
