@@ -75,12 +75,15 @@ export class localSessionIndex {
 
 /**** NameList ****/
 
-  public NameList ():Textline[] {
+  public get NameList ():Textline[] {
     let Result:Textline[] = []
       for (let SessionName in this._Index) {
         Result.push(SessionName)
       }
     return Result
+  }
+  public set NameList (_:Textline[]) {
+    throwError('ReadOnly: the "NameList" must not be set, it will be calculated')
   }
 
 /**** import (overwrites existing entries) ****/
