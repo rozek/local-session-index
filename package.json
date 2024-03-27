@@ -1,0 +1,43 @@
+{
+  "name": "localSessionIndex",
+  "version": "0.0.1",
+  "description": "a trivial index for Automerge session URLs",
+  "type": "module",
+  "source": "src/localSessionIndex.ts",
+  "exports": {
+    "types": "./dist/localSessionIndex.d.ts",
+    "require": "./dist/localSessionIndex.cjs",
+    "default": "./dist/localSessionIndex.modern.js"
+  },
+  "main": "./dist/localSessionIndex.cjs",
+  "module": "./dist/localSessionIndex.esm.js",
+  "svelte": "./dist/localSessionIndex.esm.js",
+  "umd:main": "./dist/localSessionIndex.umd.js",
+  "types": "./dist/localSessionIndex.d.ts",
+  "scripts": {
+    "build": "rimraf dist && microbundle --globals JIL=javascript-interface-library && rm -r dist/src",
+    "agadoo": "agadoo",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rozek/localSessionIndex.git"
+  },
+  "keywords": [
+    "javascript",
+    "typescript",
+    "automerge"
+  ],
+  "author": "Andreas Rozek <a.rozek@gmx.de> (https://www.rozek.de/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rozek/localSessionIndex/issues"
+  },
+  "homepage": "https://github.com/rozek/localSessionIndex#readme",
+  "devDependencies": {
+    "agadoo": "^2.0.0",
+    "javascript-interface-library": "^1.0.5",
+    "microbundle": "^0.15.1",
+    "rimraf": "^3.0.2"
+  }
+}
