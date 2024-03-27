@@ -2,6 +2,12 @@
 
 a trivial index for Automerge session URLs
 
+
+(documentation follows)
+
+
+
+
 ## Build Instructions ##
 
 You may easily build this package yourself.
