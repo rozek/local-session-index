@@ -1,5 +1,5 @@
 {
-  "name": "localSessionIndex",
+  "name": "local-session-index",
   "version": "0.0.1",
   "description": "a trivial index for Automerge session URLs",
   "type": "module",
@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rozek/localSessionIndex.git"
+    "url": "git+https://github.com/rozek/local-session-index.git"
   },
   "keywords": [
     "javascript",
@@ -31,9 +31,9 @@
   "author": "Andreas Rozek <a.rozek@gmx.de> (https://www.rozek.de/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rozek/localSessionIndex/issues"
+    "url": "https://github.com/rozek/local-session-index/issues"
   },
-  "homepage": "https://github.com/rozek/localSessionIndex#readme",
+  "homepage": "https://github.com/rozek/local-session-index#readme",
   "devDependencies": {
     "agadoo": "^2.0.0",
     "javascript-interface-library": "^1.0.5",
