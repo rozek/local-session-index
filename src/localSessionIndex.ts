@@ -106,7 +106,10 @@ export class localSessionIndex {
 
     for (let Key in Store) {
       const Value = Store[Key]
-      if (ValueIsAutomergeURL(Key) && ValueIsTextline(Value) && (Value.trim() !== '')) {
+      if (
+        ValueIsTextline(Key) && (Key.trim() !== '') &&
+        ValueIsAutomergeURL('automerge:' + Value)
+      ) {
         this._Index[Key] = Value
       }
     }
@@ -115,7 +118,7 @@ export class localSessionIndex {
 /**** export ****/
 
   public export ():string {
-    return JSON.stringify(this._Index)
+    return JSON.stringify(this._Index)           // URLs w/o 'automerge:' prefix
   }
 
 /**** preserve ****/
@@ -123,7 +126,7 @@ export class localSessionIndex {
   public preserve ():void {
     localStorage.setItem(
       'Automerge Session Index', JSON.stringify(this._Index)
-    )
+    )                                            // URLs w/o 'automerge:' prefix
   }
 
 /**** restore (removes any existing entries) ****/
@@ -144,7 +147,10 @@ export class localSessionIndex {
 
     for (let Key in Store) {
       const Value = Store[Key]
-      if (ValueIsAutomergeURL(Key) && ValueIsTextline(Value) && (Value.trim() !== '')) {
+      if (
+        ValueIsTextline(Key) && (Key.trim() !== '') &&
+        ValueIsAutomergeURL('automerge:' + Value)
+      ) {
         this._Index[Key] = Value
       }
     }
