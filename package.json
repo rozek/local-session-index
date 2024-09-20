@@ -1,21 +1,22 @@
 {
   "name": "local-session-index",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "a trivial index for Automerge session URLs",
-  "type": "module",
-  "source": "src/localSessionIndex.ts",
-  "exports": {
-    "types": "./dist/localSessionIndex.d.ts",
-    "require": "./dist/localSessionIndex.cjs",
-    "default": "./dist/localSessionIndex.modern.js"
-  },
-  "main": "./dist/localSessionIndex.cjs",
+  "source": "./src/localSessionIndex.ts",
+  "main":   "./dist/localSessionIndex.umd.js",
+  "browser":"./dist/localSessionIndex.umd.js",
   "module": "./dist/localSessionIndex.esm.js",
   "svelte": "./dist/localSessionIndex.esm.js",
-  "umd:main": "./dist/localSessionIndex.umd.js",
-  "types": "./dist/localSessionIndex.d.ts",
+  "types":  "./dist/localSessionIndex.d.ts",
+  "exports": {
+    "require":"./dist/localSessionIndex.umd.js",
+    "browser":"./dist/localSessionIndex.umd.js",
+    "import": "./dist/localSessionIndex.esm.js",
+    "svelte": "./dist/localSessionIndex.esm.js",
+    "types":  "./dist/localSessionIndex.d.ts"
+  },
   "scripts": {
-    "build": "rimraf dist && microbundle --globals JIL=javascript-interface-library && rm -r dist/src",
+    "build": "rimraf dist && microbundle --globals JIL=javascript-interface-library && rimraf dist/src",
     "agadoo": "agadoo",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
